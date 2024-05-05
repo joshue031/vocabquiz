@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>German Vocabulary Quiz</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="question">Word in German?</div>
+        <button class="option" onclick="checkAnswer(1)">Option 1</button>
+        <button class="option" onclick="checkAnswer(2)">Option 2</button>
+        <button class="option" onclick="checkAnswer(3)">Option 3</button>
+        <button class="option" onclick="checkAnswer(4)">Option 4</button>
+        <div id="result"></div>
+        <button id="next" onclick="nextQuestion()">Next</button>
+        
+        <!-- Options -->
+        <label>
+            <input type="checkbox" id="priorityCheckbox" onchange="togglePriority(event)"> High Priority
+        </label>
+        <label>
+            <input type="checkbox" id="filterPriorityCheckbox" onchange="filterPriority()" checked> Show Only High Priority
+        </label>
+    </div>
+    <!-- Link to JavaScript file -->
+    <script src="{{ url_for('static', filename='quiz.js') }}"></script>
+</body>
+</html>
+
